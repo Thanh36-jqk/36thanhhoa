@@ -19,7 +19,7 @@
                 <span class="cart-count">0</span>
             </div>
            
-            <a href="#">Cửa Hàng</a>
+            <a href="#">Cửa Hàng</a>    
             <a href="#">Mac</a>
             <a href="#">iPhone</a>
             <a href="#">Watch</a>
@@ -185,62 +185,7 @@
                 <ul id="cart-items"></ul>
                 <button onclick="closeCart()">Đóng</button>
             </div>
-            <script>
-                let cart = JSON.parse(localStorage.getItem("cart")) || [];
-               
-                function addToCart(name, category, price, image) {
-                    const existing = cart.find(p => p.name === name);
-                    if (existing) {
-                        existing.qty += 1;
-                    } else {
-                        cart.push({ name, category, price, image, qty: 1 });
-                    }
-                    localStorage.setItem("cart", JSON.stringify(cart));
-                    updateCartCount();
-                }
-               
-                function updateCartCount() {
-                    const count = cart.reduce((sum, p) => sum + p.qty, 0);
-                    document.querySelector(".cart-count").textContent = count;
-                }
-               
-                function openCart() {
-                    const popup = document.getElementById("cart-popup");
-                    const list = document.getElementById("cart-items");
-                    list.innerHTML = "";
-               
-                    if (cart.length === 0) {
-                        list.innerHTML = "<li>Không có sản phẩm nào.</li>";
-                    } else {
-                        cart.forEach((item, index) => {
-                            const li = document.createElement("li");
-                            li.innerHTML = `
-                                <strong>${item.name}</strong><br>
-                                Số lượng: ${item.qty}<br>
-                                <button onclick="removeFromCart(${index})">Xoá</button>
-                            `;
-                            list.appendChild(li);
-                        });
-                    }
-               
-                    popup.style.display = "block";
-                }
-               
-                function closeCart() {
-                    document.getElementById("cart-popup").style.display = "none";
-                }
-               
-                function removeFromCart(index) {
-                    cart.splice(index, 1);
-                    localStorage.setItem("cart", JSON.stringify(cart));
-                    updateCartCount();
-                    openCart();
-                }
-               
-                document.querySelector(".cart-container").addEventListener("click", openCart);
-                updateCartCount();
-                </script>
-                
+          
                 <!-- Login and Signup Modals -->
                
                     <div class="product-item">
