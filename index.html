@@ -242,124 +242,7 @@
                 </script>
                 
                 <!-- Login and Signup Modals -->
-                <div id="login-modal" class="modal" style="display:none; position:fixed; top:50%; left:50%; transform: translate(-50%, -50%); background:#fff; padding:20px; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.5); z-index:1000;">
-                    <h2>Login</h2>
-                    <form id="login-form">
-                        <label for="login-username">Username:</label><br>
-                        <input type="text" id="login-username" name="username" required><br>
-                        <label for="login-password">Password:</label><br>
-                        <input type="password" id="login-password" name="password" required><br><br>
-                        <button type="submit">Login</button>
-                        <button type="button" id="login-cancel">Cancel</button>
-                    </form>
-                </div>
-                <div id="signup-modal" class="modal" style="display:none; position:fixed; top:50%; left:50%; transform: translate(-50%, -50%); background:#fff; padding:20px; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.5); z-index:1000;">
-                    <h2>Sign Up</h2>
-                    <form id="signup-form">
-                        <label for="signup-username">Username:</label><br>
-                        <input type="text" id="signup-username" name="username" required><br>
-                        <label for="signup-password">Password:</label><br>
-                        <input type="password" id="signup-password" name="password" required><br><br>
-                        <button type="submit">Sign Up</button>
-                        <button type="button" id="signup-cancel">Cancel</button>
-                    </form>
-                </div>
-                <script>
-                    const loginBtn = document.getElementById('login-btn');
-                    const signupBtn = document.getElementById('signup-btn');
-                    const logoutBtn = document.getElementById('logout-btn');
-                    const userInfo = document.getElementById('user-info');
-                    const loginModal = document.getElementById('login-modal');
-                    const signupModal = document.getElementById('signup-modal');
-                    const loginCancel = document.getElementById('login-cancel');
-                    const signupCancel = document.getElementById('signup-cancel');
-                    
-                    function showLogin() {
-                        loginModal.style.display = 'block';
-                    }
-                    function hideLogin() {
-                        loginModal.style.display = 'none';
-                    }
-                    function showSignup() {
-                        signupModal.style.display = 'block';
-                    }
-                    function hideSignup() {
-                        signupModal.style.display = 'none';
-                    }
-                    
-                    loginBtn.addEventListener('click', showLogin);
-                    signupBtn.addEventListener('click', showSignup);
-                    loginCancel.addEventListener('click', hideLogin);
-                    signupCancel.addEventListener('click', hideSignup);
-                    
-                    logoutBtn.addEventListener('click', () => {
-                        localStorage.removeItem('loggedInUser');
-                        updateUserUI();
-                    });
-                    
-                    function updateUserUI() {
-                        const user = localStorage.getItem('loggedInUser');
-                        if (user) {
-                            userInfo.textContent = 'Logged in as: ' + user;
-                            loginBtn.style.display = 'none';
-                            signupBtn.style.display = 'none';
-                            logoutBtn.style.display = 'inline-block';
-                        } else {
-                            userInfo.textContent = '';
-                            loginBtn.style.display = 'inline-block';
-                            signupBtn.style.display = 'inline-block';
-                            logoutBtn.style.display = 'none';
-                        }
-                    }
-                    
-                    document.getElementById('login-form').addEventListener('submit', async (e) => {
-                        e.preventDefault();
-                        const username = document.getElementById('login-username').value;
-                        const password = document.getElementById('login-password').value;
-                        try {
-                            const response = await fetch('http://localhost:3000/api/login', {
-                                method: 'POST',
-                                headers: { 'Content-Type': 'application/json' },
-                                body: JSON.stringify({ username, password })
-                            });
-                            const data = await response.json();
-                            if (response.ok) {
-                                localStorage.setItem('loggedInUser', data.username);
-                                updateUserUI();
-                                hideLogin();
-                                alert('Login successful');
-                            } else {
-                                alert(data.message || 'Login failed');
-                            }
-                        } catch (error) {
-                            alert('Error connecting to server');
-                        }
-                    });
-                    
-                    document.getElementById('signup-form').addEventListener('submit', async (e) => {
-                        e.preventDefault();
-                        const username = document.getElementById('signup-username').value;
-                        const password = document.getElementById('signup-password').value;
-                        try {
-                            const response = await fetch('http://localhost:3000/api/register', {
-                                method: 'POST',
-                                headers: { 'Content-Type': 'application/json' },
-                                body: JSON.stringify({ username, password })
-                            });
-                            const data = await response.json();
-                            if (response.ok) {
-                                alert('Registration successful, please login');
-                                hideSignup();
-                            } else {
-                                alert(data.message || 'Registration failed');
-                            }
-                        } catch (error) {
-                            alert('Error connecting to server');
-                        }
-                    });
-                    
-                    updateUserUI();
-                </script>
+               
                     <div class="product-item">
                         <div class="product-image">
                             <img src="C:\Users\DELL\Downloads\image\airpod2.jpg" alt="Airpods Pro 2">
@@ -566,29 +449,7 @@
       
       
     </div>
-    <script>
-        const slider = document.getElementById("slider");
-        const slides = slider.querySelectorAll("img");
-        const totalSlides = slides.length;
-        let currentIndex = 0;
-      
-        function updateSlide() {
-          slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-        }
-      
-        function nextSlide() {
-          currentIndex = (currentIndex + 1) % totalSlides;
-          updateSlide();
-        }
-      
-        function prevSlide() {
-          currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-          updateSlide();
-        }
-      </script>
-      <script src="script.js"></script>
-
-      
+   
       
     <div class="footer"></div>
 </body>
