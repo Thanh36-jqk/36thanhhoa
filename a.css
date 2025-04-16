@@ -1,0 +1,371 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-family:sans-serif;
+display: flex;
+
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 2px solid #fafafa;
+    border-radius: 50px;
+    padding: 5px;
+    width: 50px;
+    background: white;
+    transition: width 0.4s ease;
+    overflow: hidden;
+}
+
+
+.search-container:hover,
+.search-container:focus-within {
+    width: 250px;
+}
+
+
+.search-input {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+
+.search-container:hover .search-input,
+.search-container:focus-within .search-input {
+    opacity: 1;
+}
+.cart-container {
+    color: white;
+    position: relative;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+
+.cart-container .cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+
+.list{
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+ 
+}
+.menu {
+    position: absolute;
+    top: 00; /* Cách mép trên */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    background: rgba(0, 0, 0, 0.6); /* Nền mờ để dễ đọc */
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+
+.menu a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+   
+}
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    padding-top: 80px; /* dịch ảnh + chữ xuống dưới menu */
+}
+
+
+.background-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(5px) brightness(0.5); /* Làm mờ + giảm độ sáng để chữ nổi bật hơn */
+    z-index: 1;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 20px;
+}
+
+.hero-text h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 1.5em;
+    animation: fadeIn 2s ease-in;
+    
+    
+}
+
+
+ 
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px);}
+    100% { opacity: 1; transform: translateY(0);}
+  }
+ 
+
+
+.image-container img {
+   
+    width: 100%;
+    height: 90%;
+    display: block;
+}
+.menu a:hover {
+    color: rgb(195, 214, 17);
+    text-decoration: underline;
+    transition: ease 0,5s ;
+}
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 20px;
+    list-style: none;
+    margin: 0;
+}
+
+
+.product-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+
+.product-item img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+
+.product-info {
+    padding: 12px;
+    text-align: center;
+}
+
+
+.product-cat {
+    font-size: 12px;
+    color: #888;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 4px;
+}
+
+
+.product-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #222;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+}
+
+
+.product-price {
+    font-size: 14px;
+    font-weight: bold;
+    color: #e53935;
+}
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+
+
+}
+.item {
+    background-color: #f7f6f9;
+}
+.cart-popup {
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    padding: 20px;
+    width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+    border-radius: 12px;
+}
+
+
+.cart-popup h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+
+.cart-popup ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.cart-popup li {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+
+.cart-popup button {
+    background-color: crimson;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.product-info button {
+    display: none;
+    margin-top: 10px;
+    background-color: #e53935;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+
+.product-info button:hover {
+    background-color: #c62828;
+}
+
+
+.product-item:hover .product-info button {
+    display: inline-block;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.7); /* nền mờ đẹp */
+}
+
+  
+  /* --- Đẩy nội dung xuống dưới menu --- */
+  main {
+    margin-top: 80px;
+    text-align: center;
+  }
+  .slider-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 500px;
+    overflow: hidden;
+    margin: 50px auto;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+  }
+  
+  .slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Hiển thị ảnh đầy đủ không bị cắt */
+    flex-shrink: 0;
+    padding: 10px;
+    background: white;
+  }
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 100;
+    transition: background-color 0.3s ease;
+  }
+  
+  .arrow:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .arrow.left {
+    left: 15px;
+  }
+  
+  .arrow.right {
+    right: 15px;
+  }
+  

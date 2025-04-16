@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple</title>
+    <link rel="stylesheet" href="a.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+</head>
+<body>
+    <div class="list"></div>
+    <div class="container">
+     <header>
+        <nav class="menu">
+            <div class="cart-container">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+           
+            <a href="#">Cửa Hàng</a>
+            <a href="#">Mac</a>
+            <a href="#">iPhone</a>
+            <a href="#">Watch</a>
+            <a href="#">AirPods</a>
+            <a href="#">TV & Nhà</a>
+            <a href="#">Giải Trí</a>
+            <a href="#">Phụ Kiện</a>
+            <a href="#">Hỗ Trợ</a>
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search...">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+        </nav>
+        </header>
+        <div class="hero">
+            <img src="c:\Users\DELL\Downloads\image\apple.webp" alt="iPhone 16 Pro Max" class="background-img">
+            <div class="hero-text">
+                <h1>iPhone 16 Pro Max</h1>
+                <p>Hiệu năng đỉnh cao – Đẳng cấp vượt trội</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <h2>Sản phẩm bán chạy</h2>
+            <ul class="product-list">
+                <li>
+        <div class="item">
+            <h2>Sản phẩm bán chạy</h2>
+            <ul class="product-list">
+                <li>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="C:\Users\DELL\Downloads\image\airpod2.jpg" alt="Airpods Pro 2">
+                        </div>
+                        <div class="product-info">
+                            <a href="#" class="product-cat">HeadPhone</a>
+                            <a href="#" class="product-name">Airpods Pro 2</a>
+                            <div class="product-price">5.000.000$</div>
+                            <button onclick='addToCart("Airpods Pro 2", "HeadPhone", "5.000.000$", "C:\\Users\\DELL\\Downloads\\image\\airpod2.jpg")'>Thêm vào giỏ</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="C:\Users\DELL\Downloads\image\iphone7plus.jpeg" alt="Iphone 7 Plus">
+                        </div>
+                        <div class="product-info">
+                            <a href="#" class="product-cat">Phone</a>
+                            <a href="#" class="product-name">Iphone 7 Plus</a>
+                            <div class="product-price">22.000.000$</div>
+                            <button onclick='addToCart("Iphone 7 Plus", "Phone", "22.000.000$", "C:\\Users\\DELL\\Downloads\\image\\iphone7plus.jpeg")'>Thêm vào giỏ</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="C:\Users\DELL\Downloads\image\iphone8plus.webp" alt="Iphone 8 Plus">
+                        </div>
+                        <div class="product-info">
+                            <a href="#" class="product-cat">Phone</a>
+                            <a href="#" class="product-name">Iphone 8 Plus</a>
+                            <div class="product-price">5.000.000$</div>
+                            <button onclick='addToCart("Iphone 8 Plus", "Phone", "5.000.000$", "C:\\Users\\DELL\\Downloads\\image\\iphone8plus.webp")'>Thêm vào giỏ</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="C:\Users\DELL\Downloads\image\iphone11.jpg" alt="Iphone 11">
+                        </div>
+                        <div class="product-info">
+                            <a href="#" class="product-cat">Phone</a>
+                            <a href="#" class="product-name">Iphone 11</a>
+                            <div class="product-price">66.000.000$</div>
+                            <button onclick='addToCart("Iphone 11", "Phone", "66.000.000$", "C:\\Users\\DELL\\Downloads\\image\\iphone11.jpg")'>Thêm vào giỏ</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="C:\Users\DELL\Downloads\image\iphone11pro.jpg" alt="Iphone 11 Pro">
+                        </div>
+                        <div class="product-info">
+                            <a href="#" class="product-cat">Phone</a>
+                            <a href="#" class="product-name">Iphone 11 Pro</a>
+                            <div class="product-price">77.000.000$</div>
+                            <button onclick='addToCart("Iphone 11 Pro", "Phone", "77.000.000$", "C:\\Users\\DELL\\Downloads\\image\\iphone11pro.jpg")'>Thêm vào giỏ</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="C:\Users\DELL\Downloads\image\iphone11promax.jpg" alt="Iphone 11 ProMax">
+                        </div>
+                        <div class="product-info">
+                            <a href="#" class="product-cat">Phone</a>
+                            <a href="#" class="product-name">Iphone 11 ProMax</a>
+                            <div class="product-price">110.000.000$</div>
+                            <button onclick='addToCart("Iphone 11 ProMax", "Phone", "110.000.000$", "C:\\Users\\DELL\\Downloads\\image\\iphone11promax.jpg")'>Thêm vào giỏ</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="C:\Users\DELL\Downloads\image\iphone14promax.webp" alt="Iphone 14 ProMax">
+                        </div>
+                        <div class="product-info">
+                            <a href="#" class="product-cat">Phone</a>
+                            <a href="#" class="product-name">Iphone 14 ProMax</a>
+                            <div class="product-price">26.500.000$</div>
+                            <button onclick='addToCart("Iphone 14 ProMax", "Phone", "26.500.000$", "C:\\Users\\DELL\\Downloads\\image\\iphone14promax.webp")'>Thêm vào giỏ</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="C:\Users\DELL\Downloads\image\iphone15promax.webp" alt="Iphone 15 ProMax">
+                        </div>
+                        <div class="product-info">
+                            <a href="#" class="product-cat">Phone</a>
+                            <a href="#" class="product-name">Iphone 15 ProMax</a>
+                            <div class="product-price">27.500.000$</div>
+                            <button onclick='addToCart("Iphone 15 ProMax", "Phone", "27.500.000$", "C:\\Users\\DELL\\Downloads\\image\\iphone15promax.webp")'>Thêm vào giỏ</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="C:\Users\DELL\\Downloads\\image\\iphone16promax.jpg" alt="Iphone 16 ProMax">
+                        </div>
+                        <div class="product-info">
+                            <a href="#" class="product-cat">Phone</a>
+                            <a href="#" class="product-name">Iphone 16 ProMax</a>
+                            <div class="product-price">31.000.000$</div>
+                            <button onclick='addToCart("Iphone 16 ProMax", "Phone", "31.000.000$", "C:\\Users\\DELL\\Downloads\\image\\iphone16promax.jpg")'>Thêm vào giỏ</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="C:\Users\DELL\\Downloads\\image\\iphonexsmax.jpg " alt="Iphone XsMax">
+                        </div>
+                        <div class="product-info">
+                            <a href="#" class="product-cat">Phone</a>
+                            <a href="#" class="product-name">Iphone XsMax</a>
+                            <div class="product-price">6.500.000$</div>
+                            <button onclick='addToCart("Iphone XsMax", "Phone", "6.500.000$", "C:\\Users\\DELL\\Downloads\\image\\iphonexsmax.jpg")'>Thêm vào giỏ</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div id="cart-popup" class="cart-popup">
+                <h3>Giỏ hàng của bạn</h3>
+                <ul id="cart-items"></ul>
+                <button onclick="closeCart()">Đóng</button>
+            </div>
+            <script>
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+               
+                function addToCart(name, category, price, image) {
+                    const existing = cart.find(p => p.name === name);
+                    if (existing) {
+                        existing.qty += 1;
+                    } else {
+                        cart.push({ name, category, price, image, qty: 1 });
+                    }
+                    localStorage.setItem("cart", JSON.stringify(cart));
+                    updateCartCount();
+                }
+               
+                function updateCartCount() {
+                    const count = cart.reduce((sum, p) => sum + p.qty, 0);
+                    document.querySelector(".cart-count").textContent = count;
+                }
+               
+                function openCart() {
+                    const popup = document.getElementById("cart-popup");
+                    const list = document.getElementById("cart-items");
+                    list.innerHTML = "";
+               
+                    if (cart.length === 0) {
+                        list.innerHTML = "<li>Không có sản phẩm nào.</li>";
+                    } else {
+                        cart.forEach((item, index) => {
+                            const li = document.createElement("li");
+                            li.innerHTML = `
+                                <strong>${item.name}</strong><br>
+                                Số lượng: ${item.qty}<br>
+                                <button onclick="removeFromCart(${index})">Xoá</button>
+                            `;
+                            list.appendChild(li);
+                        });
+                    }
+               
+                    popup.style.display = "block";
+                }
+               
+                function closeCart() {
+                    document.getElementById("cart-popup").style.display = "none";
+                }
+               
+                function removeFromCart(index) {
+                    cart.splice(index, 1);
+                    localStorage.setItem("cart", JSON.stringify(cart));
+                    updateCartCount();
+                    openCart();
+                }
+               
+                document.querySelector(".cart-container").addEventListener("click", openCart);
+                updateCartCount();
+                </script>
+                
+                <!-- Login and Signup Modals -->
+                <div id="login-modal" class="modal" style="display:none; position:fixed; top:50%; left:50%; transform: translate(-50%, -50%); background:#fff; padding:20px; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.5); z-index:1000;">
+                    <h2>Login</h2>
+                    <form id="login-form">
+                        <label for="login-username">Username:</label><br>
+                        <input type="text" id="login-username" name="username" required><br>
+                        <label for="login-password">Password:</label><br>
+                        <input type="password" id="login-password" name="password" required><br><br>
+                        <button type="submit">Login</button>
+                        <button type="button" id="login-cancel">Cancel</button>
+                    </form>
+                </div>
+                <div id="signup-modal" class="modal" style="display:none; position:fixed; top:50%; left:50%; transform: translate(-50%, -50%); background:#fff; padding:20px; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.5); z-index:1000;">
+                    <h2>Sign Up</h2>
+                    <form id="signup-form">
+                        <label for="signup-username">Username:</label><br>
+                        <input type="text" id="signup-username" name="username" required><br>
+                        <label for="signup-password">Password:</label><br>
+                        <input type="password" id="signup-password" name="password" required><br><br>
+                        <button type="submit">Sign Up</button>
+                        <button type="button" id="signup-cancel">Cancel</button>
+                    </form>
+                </div>
+                <script>
+                    const loginBtn = document.getElementById('login-btn');
+                    const signupBtn = document.getElementById('signup-btn');
+                    const logoutBtn = document.getElementById('logout-btn');
+                    const userInfo = document.getElementById('user-info');
+                    const loginModal = document.getElementById('login-modal');
+                    const signupModal = document.getElementById('signup-modal');
+                    const loginCancel = document.getElementById('login-cancel');
+                    const signupCancel = document.getElementById('signup-cancel');
+                    
+                    function showLogin() {
+                        loginModal.style.display = 'block';
+                    }
+                    function hideLogin() {
+                        loginModal.style.display = 'none';
+                    }
+                    function showSignup() {
+                        signupModal.style.display = 'block';
+                    }
+                    function hideSignup() {
+                        signupModal.style.display = 'none';
+                    }
+                    
+                    loginBtn.addEventListener('click', showLogin);
+                    signupBtn.addEventListener('click', showSignup);
+                    loginCancel.addEventListener('click', hideLogin);
+                    signupCancel.addEventListener('click', hideSignup);
+                    
+                    logoutBtn.addEventListener('click', () => {
+                        localStorage.removeItem('loggedInUser');
+                        updateUserUI();
+                    });
+                    
+                    function updateUserUI() {
+                        const user = localStorage.getItem('loggedInUser');
+                        if (user) {
+                            userInfo.textContent = 'Logged in as: ' + user;
+                            loginBtn.style.display = 'none';
+                            signupBtn.style.display = 'none';
+                            logoutBtn.style.display = 'inline-block';
+                        } else {
+                            userInfo.textContent = '';
+                            loginBtn.style.display = 'inline-block';
+                            signupBtn.style.display = 'inline-block';
+                            logoutBtn.style.display = 'none';
+                        }
+                    }
+                    
+                    document.getElementById('login-form').addEventListener('submit', async (e) => {
+                        e.preventDefault();
+                        const username = document.getElementById('login-username').value;
+                        const password = document.getElementById('login-password').value;
+                        try {
+                            const response = await fetch('http://localhost:3000/api/login', {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify({ username, password })
+                            });
+                            const data = await response.json();
+                            if (response.ok) {
+                                localStorage.setItem('loggedInUser', data.username);
+                                updateUserUI();
+                                hideLogin();
+                                alert('Login successful');
+                            } else {
+                                alert(data.message || 'Login failed');
+                            }
+                        } catch (error) {
+                            alert('Error connecting to server');
+                        }
+                    });
+                    
+                    document.getElementById('signup-form').addEventListener('submit', async (e) => {
+                        e.preventDefault();
+                        const username = document.getElementById('signup-username').value;
+                        const password = document.getElementById('signup-password').value;
+                        try {
+                            const response = await fetch('http://localhost:3000/api/register', {
+                                method: 'POST',
+                                headers: { 'Content-Type': 'application/json' },
+                                body: JSON.stringify({ username, password })
+                            });
+                            const data = await response.json();
+                            if (response.ok) {
+                                alert('Registration successful, please login');
+                                hideSignup();
+                            } else {
+                                alert(data.message || 'Registration failed');
+                            }
+                        } catch (error) {
+                            alert('Error connecting to server');
+                        }
+                    });
+                    
+                    updateUserUI();
+                </script>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="C:\Users\DELL\Downloads\image\airpod2.jpg" alt="Airpods Pro 2">
+                        </div>
+                        <div class="product-info">
+                            <a href="#" class="product-cat">HeadPhone</a>
+                            <a href="#" class="product-name">Airpods Pro 2</a>
+                            <div class="product-price">5.000.000$</div>
+                            <button onclick='addToCart("Airpods Pro 2", "HeadPhone", "5.000.000$", "C:\\Users\\DELL\\Downloads\\image\\airpod2.jpg")'>Thêm vào giỏ</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="C:\Users\DELL\Downloads\image\iphone7plus.jpeg" alt="Iphone 7 Plus">
+                        </div>
+                        <div class="product-info">
+                            <a href="#" class="product-cat">Phone</a>
+                            <a href="#" class="product-name">Iphone 7 Plus</a>
+                            <div class="product-price">22.000.000$</div>
+                            <button onclick='addToCart("Iphone 7 Plus", "Phone", "22.000.000$", "C:\\Users\\DELL\\Downloads\\image\\iphone7plus.jpeg")'>Thêm vào giỏ</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="C:\Users\DELL\Downloads\image\iphone8plus.webp" alt="Iphone 8 Plus">
+                        </div>
+                        <div class="product-info">
+                            <a href="#" class="product-cat">Phone</a>
+                            <a href="#" class="product-name">Iphone 8 Plus</a>
+                            <div class="product-price">5.000.000$</div>
+                            <button onclick='addToCart("Iphone 8 Plus", "Phone", "5.000.000$", "C:\\Users\\DELL\\Downloads\\image\\iphone8plus.webp")'>Thêm vào giỏ</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="C:\Users\DELL\Downloads\image\iphone11.jpg" alt="Iphone 11">
+                        </div>
+                        <div class="product-info">
+                            <a href="#" class="product-cat">Phone</a>
+                            <a href="#" class="product-name">Iphone 11</a>
+                            <div class="product-price">66.000.000$</div>
+                            <button onclick='addToCart("Iphone 11", "Phone", "66.000.000$", "C:\\Users\\DELL\\Downloads\\image\\iphone11.jpg")'>Thêm vào giỏ</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="C:\Users\DELL\Downloads\image\iphone11pro.jpg" alt="Iphone 11 Pro">
+                        </div>
+                        <div class="product-info">
+                            <a href="#" class="product-cat">Phone</a>
+                            <a href="#" class="product-name">Iphone 11 Pro</a>
+                            <div class="product-price">77.000.000$</div>
+                            <button onclick='addToCart("Iphone 11 Pro", "Phone", "77.000.000$", "C:\\Users\\DELL\\Downloads\\image\\iphone11pro.jpg")'>Thêm vào giỏ</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="C:\Users\DELL\Downloads\image\iphone11promax.jpg" alt="Iphone 11 ProMax">
+                        </div>
+                        <div class="product-info">
+                            <a href="#" class="product-cat">Phone</a>
+                            <a href="#" class="product-name">Iphone 11 ProMax</a>
+                            <div class="product-price">110.000.000$</div>
+                            <button onclick='addToCart("Iphone 11 ProMax", "Phone", "110.000.000$", "C:\\Users\\DELL\\Downloads\\image\\iphone11promax.jpg")'>Thêm vào giỏ</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="C:\Users\DELL\Downloads\image\iphone14promax.webp" alt="Iphone 14 ProMax">
+                        </div>
+                        <div class="product-info">
+                            <a href="#" class="product-cat">Phone</a>
+                            <a href="#" class="product-name">Iphone 14 ProMax</a>
+                            <div class="product-price">26.500.000$</div>
+                            <button onclick='addToCart("Iphone 14 ProMax", "Phone", "26.500.000$", "C:\\Users\\DELL\\Downloads\\image\\iphone14promax.webp")'>Thêm vào giỏ</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="C:\Users\DELL\Downloads\image\iphone15promax.webp" alt="Iphone 15 ProMax">
+                        </div>
+                        <div class="product-info">
+                            <a href="#" class="product-cat">Phone</a>
+                            <a href="#" class="product-name">Iphone 15 ProMax</a>
+                            <div class="product-price">27.500.000$</div>
+                            <button onclick='addToCart("Iphone 15 ProMax", "Phone", "27.500.000$", "C:\\Users\\DELL\\Downloads\\image\\iphone15promax.webp")'>Thêm vào giỏ</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="C:\Users\DELL\Downloads\image\iphone16promax.jpg" alt="Iphone 16 ProMax">
+                        </div>
+                        <div class="product-info">
+                            <a href="#" class="product-cat">Phone</a>
+                            <a href="#" class="product-name">Iphone 16 ProMax</a>
+                            <div class="product-price">31.000.000$</div>
+                            <button onclick='addToCart("Iphone 16 ProMax", "Phone", "31.000.000$", "C:\\Users\\DELL\\Downloads\\image\\iphone16promax.jpg")'>Thêm vào giỏ</button>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="product-item">
+                        <div class="product-image">
+                            <img src="C:\Users\DELL\Downloads\image\iphonexsmax.jpg " alt="Iphone XsMax">
+                        </div>
+                        <div class="product-info">
+                            <a href="#" class="product-cat">Phone</a>
+                            <a href="#" class="product-name">Iphone XsMax</a>
+                            <div class="product-price">6.500.000$</div>
+                            <button onclick='addToCart("Iphone XsMax", "Phone", "6.500.000$", "C:\\Users\\DELL\\Downloads\\image\\iphonexsmax.jpg")'>Thêm vào giỏ</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div id="cart-popup" class="cart-popup">
+                <h3>Giỏ hàng của bạn</h3>
+                <ul id="cart-items"></ul>
+                <button onclick="closeCart()">Đóng</button>
+            </div>
+            <script>
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+               
+                function addToCart(name, category, price, image) {
+                    const existing = cart.find(p => p.name === name);
+                    if (existing) {
+                        existing.qty += 1;
+                    } else {
+                        cart.push({ name, category, price, image, qty: 1 });
+                    }
+                    localStorage.setItem("cart", JSON.stringify(cart));
+                    updateCartCount();
+                }
+               
+                function updateCartCount() {
+                    const count = cart.reduce((sum, p) => sum + p.qty, 0);
+                    document.querySelector(".cart-count").textContent = count;
+                }
+               
+                function openCart() {
+                    const popup = document.getElementById("cart-popup");
+                    const list = document.getElementById("cart-items");
+                    list.innerHTML = "";
+               
+                    if (cart.length === 0) {
+                        list.innerHTML = "<li>Không có sản phẩm nào.</li>";
+                    } else {
+                        cart.forEach((item, index) => {
+                            const li = document.createElement("li");
+                            li.innerHTML = `
+                                <strong>${item.name}</strong><br>
+                                Số lượng: ${item.qty}<br>
+                                <button onclick="removeFromCart(${index})">Xoá</button>
+                            `;
+                            list.appendChild(li);
+                        });
+                    }
+               
+                    popup.style.display = "block";
+                }
+               
+                function closeCart() {
+                    document.getElementById("cart-popup").style.display = "none";
+                }
+               
+                function removeFromCart(index) {
+                    cart.splice(index, 1);
+                    localStorage.setItem("cart", JSON.stringify(cart));
+                    updateCartCount();
+                    openCart();
+                }
+               
+                document.querySelector(".cart-container").addEventListener("click", openCart);
+                updateCartCount();
+                </script>
+                   
+    </div>
+    <div class="slider-wrapper">
+        <div class="slider" id="slider">
+          <img src="C:/Users/DELL/Downloads/image/apple-macbook-pro-14-16-inch-jpeg-b2dc7a7d-d44c-4d26-ad51-a97756e6e9a7.webp" alt="MacBook Pro">
+          <img src="C:/Users/DELL/Downloads/image/macbook_air_13_m2_starlight_1_24bf8f9188.png" alt="MacBook Air 1">
+          <img src="C:/Users/DELL/Downloads/image/mba13-skyblue-select-202503.jpg" alt="MacBook Air 2">
+        </div>
+      
+        <!-- Mũi tên điều hướng -->
+        <button class="arrow left" onclick="prevSlide()">&#10094;</button>
+        <button class="arrow right" onclick="nextSlide()">&#10095;</button>
+      </div>
+      
+      
+    </div>
+    <script>
+        const slider = document.getElementById("slider");
+        const slides = slider.querySelectorAll("img");
+        const totalSlides = slides.length;
+        let currentIndex = 0;
+      
+        function updateSlide() {
+          slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+      
+        function nextSlide() {
+          currentIndex = (currentIndex + 1) % totalSlides;
+          updateSlide();
+        }
+      
+        function prevSlide() {
+          currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+          updateSlide();
+        }
+      </script>
+      <script src="script.js"></script>
+
+      
+      
+    <div class="footer"></div>
+</body>
+</html>
+    
